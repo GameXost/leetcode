@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	prefix "leetcode/easy/longestPrefix"
+	"leetcode/medium"
 )
 
 func main() {
-	test1 := []string{"flower", "flow", "flight"}
-	fmt.Println(prefix.LongestCommonPrefix(test1))
+	// test1 := []string{"flower", "flow", "flight"}
+	// fmt.Println(prefix.LongestCommonPrefix(test1))
+	res := medium.Reverse(1534236469)
+	fmt.Println(res)
 }
