@@ -1,6 +1,6 @@
 package easy
 
-import "strconv"
+import "fmt"
 
 // // Definition for singly-linked list.
 // type ListNode struct {
@@ -63,3 +63,46 @@ import "strconv"
 // 	res, _ := strconv.Atoi(string(bytes))
 // 	return res
 // }
+
+// func removeElement(nums []int, val int) int {
+// 	k := 0
+
+// 	for i:= 0; i < len(nums); i++ {
+// 		if nums[i] != val{
+// 			nums[k] = nums[i]
+//  			k++
+// 		}
+// 	return k
+// }
+
+// []int{1, 2, 3, 4, 6}
+// int 4
+
+// func strStr(haystack string, needle string) int {
+// 	k := 0
+// 	for ind := 0; ind < len(haystack); ind++ {
+// 		if haystack[ind] == needle[k] {
+// 			if k == len(needle)-1 {
+// 				return ind - k
+// 			}
+// 			k++
+// 		} else {
+// 			k = 0
+// 		}
+// 	}
+// 	return -1
+// }
+
+func majorityElement(nums []int) int {
+	mapa := make(map[int]int)
+	for _, num := range nums {
+		mapa[num]++
+	}
+
+	for key, val := range mapa {
+		if val > len(nums)/2 {
+			return key
+		}
+	}
+	return 0
+}
